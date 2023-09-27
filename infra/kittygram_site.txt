@@ -1,0 +1,5 @@
+IP: 158.160.81.84;
+name_taski: https://zada4i.ddns.net/;
+name_kittygram: https://kittygrm.ddns.net/;
+login: admin;
+password: popopo11; 
