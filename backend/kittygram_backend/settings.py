@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = os.getenv('DEBUG').lower() in ['true', '1', 'yes']
+DEBUG = os.getenv('DEBUG') in ['TRUE', 'true', '1', 'yes']
 
 ALLOWED_HOSTS = ['158.160.81.84', '127.0.0.1', 'localhost', 'kittygrm.ddns.net']
 
