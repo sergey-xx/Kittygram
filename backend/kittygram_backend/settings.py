@@ -6,8 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
-
-DEBUG = False
+DEBUG = os.getenv('DEBUG').lower() in ['true', '1', 'yes']
 
 ALLOWED_HOSTS = ['158.160.81.84', '127.0.0.1', 'localhost', 'kittygrm.ddns.net']
 
@@ -92,7 +91,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = 'static_backend'
+STATIC_URL = 'static_backend/'
 STATIC_ROOT = BASE_DIR / 'static_backend'
 
 MEDIA_URL = '/media/'
