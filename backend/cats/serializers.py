@@ -98,3 +98,9 @@ class CatSerializer(serializers.ModelSerializer):
 
         instance.save()
         return instance
+    
+    def validate_birth_year(self, value):
+        year = dt.date.today().year
+        if not (year - 40 < value <= year):
+            raise serializers.ValidationError('Коту не может быть больше 40 лет')
+        return value
