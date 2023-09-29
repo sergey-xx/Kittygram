@@ -43,7 +43,7 @@ export const AddCardPage = ({ extraClass = "" }) => {
     if (typeof res.name === "object") {
       setErrorName("Поле с именем является обязательным");
     } else if (typeof res.birth_year === "object") {
-      setErrorAge("Поле с годом рождения является обязательным. Котику не может быть более 40 лет.");
+      setErrorAge("Котику должно быть от 0 до 40 лет.");
     }
   };
 
