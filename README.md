@@ -12,12 +12,12 @@ Backand: Django REST API
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone git@github.com:sergey-xx/infra_sprint1.git
+git clone git@github.com:sergey-xx/Kittygram.git
 ```
 
-Cоздать и активировать виртуальное окружение:
+## Запуск Backend:
+- Cоздать и активировать виртуальное окружение:
 
-Запуск Backend:
 ```
 python3 -m venv env
 ```
@@ -26,7 +26,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-Установить зависимости из файла requirements.txt:
+- Установить зависимости из файла requirements.txt:
 
 ```
 python3 -m pip install --upgrade pip
@@ -36,14 +36,30 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+- Выполнить миграции:
 
 ```
 python3 manage.py migrate
 ```
+- Запуск сервера:
 
+```
+python3 manage.py migrate
+```
+## Frontend
+- Установить Node.js® https://nodejs.org/en/download
+- Находясь в директории проекта, установить зависимости:
+
+```
+npm i
+```
+- Запустить проект:
+```
+npm run start
+```
+  Фронт будет доступен по адресу: http://localhost:3000
 
 ### Для использования на сервере рекомендуется использовать:
 
-WSGI-сервер: Gunicorn 20.1.0 
-Веб-сервер: Nginx
+- WSGI-сервер: Gunicorn 20.1.0 
+- Веб-сервер: Nginx
