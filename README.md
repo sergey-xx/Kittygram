@@ -1,10 +1,16 @@
-# infra_sprint1 
+# Kittigram 
 
 ### Описание проекта:
 Проект социальной сети для размещения домашних животных.
+### Возможности:
+- Добавлять профиль любимого питомца
+- Добавлять фотографию
+- Выбирать цвет питомца из палитры
+- Добавлять достижения
 
 ### Технологии
 Frontend: React
+
 Backand: Django REST API
 
 ### Как запустить проект:
@@ -15,37 +21,50 @@ Backand: Django REST API
 git clone git@github.com:sergey-xx/Kittygram.git
 ```
 
-## Запуск Backend:
-- Cоздать и активировать виртуальное окружение:
+### Backend
+**(Windows)**
 
+В папке /backend создать виртуальное окружение:
+```shell
+> python -m venv venv
 ```
-python3 -m venv env
-```
-
-```
-source env/bin/activate
-```
-
-- Установить зависимости из файла requirements.txt:
-
-```
-python3 -m pip install --upgrade pip
+Активировать виртуальное окружение:
+```shell
+> source venv/Scripts/Activate
 ```
 
+**(Linux)**
+
+В папке /backend создать виртуальное окружение:
+  
+```bash
+$ python3 -m venv venv
 ```
-pip install -r requirements.txt
+Активировать виртуальное окружение:
+```bash
+$ source venv/bin/activate
 ```
 
-- Выполнить миграции:
+Далее
 
+Установить зависимости:
+```bash
+$ pip install -r requirements.py
 ```
-python3 manage.py migrate
+Выполнить миграции БД:
+```bash
+$ python manage.py migrate
 ```
-- Запуск сервера:
+Для доступа в админ-панель создайте супер-пользователя:
+```bash
+$ python manage.py createsuperuser
+```
 
+Запустить проект:
+```bash
+$ python manage.py runserver
 ```
-python3 manage.py migrate
-```
+
 ## Frontend
 - Установить Node.js® https://nodejs.org/en/download
 - Находясь в директории проекта, установить зависимости:
